@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>惠騰內科 × 惠韻牙醫 | 聯合診所</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --cream: #F8F8F6;
+            --light-gray: #E9EAE0;
+            --blue-gray: #A9C1C9;
+            --wood: #D8CBB6;
+            --olive: #8DB39B;
+            --dark-gray: #333333;
+            --shadow: rgba(0, 0, 0, 0.08);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            color: var(--dark-gray);
+            background-color: var(--cream);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 15px;
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--olive);
+        }
+        
+        .logo-text span {
+            color: var(--blue-gray);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav li {
+            margin-left: 30px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--olive);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--olive);
+            transition: width 0.3s;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                        url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1953&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 700px;
+            padding: 0 40px;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--olive);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: 2px solid var(--olive);
+        }
+        
+        .btn:hover {
+            background-color: transparent;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            margin-left: 15px;
+        }
+        
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--olive);
+        }
+        
+        /* Services Section */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            display: inline-block;
+            background-color: var(--cream);
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 2px;
+            background-color: var(--blue-gray);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: all 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--olive);
+        }
+        
+        .service-content p {
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--light-gray);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background-color: var(--blue-gray);
+            border-radius: 50%;
+            top: -100px;
+            left: -100px;
+            opacity: 0.1;
+        }
+        
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-img {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-content {
+            flex: 1;
+        }
+        
+        .about-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: var(--olive);
+        }
+        
+        .about-content p {
+            margin-bottom: 20px;
+        }
+        
+        .highlight {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+            border-left: 4px solid var(--olive);
+        }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .team-img {
+            height: 300px;
+            background-size: cover;
+            background-position: top center;
+        }
+        
+        .team-info {
+            padding: 25px;
+        }
+        
+        .team-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+            color: var(--blue-gray);
+        }
+        
+        .team-info .position {
+            color: var(--olive);
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .team-info p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* Schedule Section */
+        .schedule {
+            background-color: var(--light-gray);
+        }
+        
+        .schedule-container {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .schedule-table {
+            flex: 1;
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        th {
+            background-color: var(--blue-gray);
+            color: white;
+            font-weight: 500;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .closed {
+            color: #bbb;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-box {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px var(--shadow);
+            margin-bottom: 30px;
+        }
+        
+        .contact-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--olive);
+        }
+        
+        .contact-item {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--blue-gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .contact-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .contact-text strong {
+            font-weight: 500;
+        }
+        
+        .map {
+            height: 200px;
+            background-color: #eee;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: var(--wood);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #444;
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--olive);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+        
+        /* Floating Buttons */
+        .floating-btns {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 999;
+        }
+        
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .floating-btn:hover {
+            transform: translateY(-5px);
+        }
+        
+        .line-btn {
+            background-color: #06C755;
+        }
+        
+        .top-btn {
+            background-color: var(--olive);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-container, .schedule-container {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav li {
+                margin: 10px 0;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="header-container container">
+            <div class="logo">
+                <div class="logo-text">惠騰<span>×</span>惠韻</div>
+            </div>
+            <nav>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul>
+                    <li><a href="#home">首頁</a></li>
+                    <li><a href="#about">關於我們</a></li>
+                    <li><a href="#team">醫療團隊</a></li>
+                    <li><a href="#services">服務項目</a></li>
+                    <li><a href="#schedule">門診時段</a></li>
+                    <li><a href="#contact">聯絡我們</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>糖尿病整合照護的健康夥伴</h1>
+            <p>惠騰內科 × 惠韻牙醫 聯合診所</p>
+            <div>
+                <a href="#schedule" class="btn">門診預約</a>
+                <a href="#services" class="btn btn-outline">服務項目</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>專業服務項目</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1579684453423-f84349ef60b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1868&q=80');"></div>
+                    <div class="service-content">
+                        <h3>血液健檢</h3>
+                        <p>透過血液檢測，得知您的健康狀態，並依照檢測結果，給予您客製化的醫療規劃及建議。</p>
+                        <a href="#" class="btn">了解更多</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80');"></div>
+                    <div class="service-content">
+                        <h3>糖尿病治療</h3>
+                        <p>內分泌專科醫師專精於糖尿病治療，以新型的糖尿病藥物優化藥物組合，穩定血糖並預防心血管事件。</p>
+                        <a href="#" class="btn">了解更多</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1581595219319-4e8b9a0a7e2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');"></div>
+                    <div class="service-content">
+                        <h3>減痛甲狀腺超音波穿刺</h3>
+                        <p>本院專精甲狀腺精準穿刺，透過超音波實時導引，精準抽吸化驗細胞，手術前超音波報告可當診提供 (須電話預約)。</p>
+                        <a href="#" class="btn">了解更多</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1580828343064-fde4fc206bc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');"></div>
+                    <div class="service-content">
+                        <h3>糖尿病口腔照護</h3>
+                        <p>健保提供糖尿病病患3個月一次的洗牙及塗氟。我們為您打造一站式服務，實現1+1>2的治療效果。</p>
+                        <a href="#" class="btn">了解更多</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1584302179602-e4c3d3fd629d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="service-content">
+                        <h3>功能醫學</h3>
+                        <p>亞健康的狀態常是因營養素的缺乏，透過營養素血液檢查的結果，為您客製化點滴或營養品的補充，讓您再現光彩。</p>
+                        <a href="#" class="btn">了解更多</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1624948465027-6f9b51067557?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="service-content">
+                        <h3>牙科治療</h3>
+                        <p>缺牙問題常造成飲食的失調，惡化血糖控制。我們提供一般牙科及植牙假牙治療，讓您重新享受飲食的樂趣，更幫助穩定血糖。</p>
+                        <a href="#" class="btn">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1953&q=80" alt="診所環境">
+                </div>
+                <div class="about-content">
+                    <h2>關於我們</h2>
+                    <p>我們是惠騰內科診所和惠韻牙醫診所組成的聯合診所。</p>
+                    <p>惠騰內科診所徐盛邦院長為內科專科醫師及內分泌科專科醫師，主治三高慢性病、內分泌疾病、成人健檢、靜脈營養，專精於糖尿病和甲狀腺疾病。</p>
+                    <p>近年來糖尿病新的藥物不斷推陳出新，臨床藥物組合也更加複雜，藉由內分泌專科醫師的豐富經驗，優化藥物組合可使您達到更好的血糖控制，並有更好的心腎保護效果。</p>
+                    <p>惠韻牙醫診所由經驗豐富的牙醫師團隊，為您全方位的解決口腔問題。診療項目包含一般牙科、人工植牙、全瓷假牙、糖尿病口腔照護、牙周雷射治療及兒童牙科。</p>
+                    
+                    <div class="highlight">
+                        <p>由於糖尿病常會造成牙周病及齲齒，而牙周病也會惡化血糖控制，因此我們打造一站式的治療，在您三個月的內科回診同時，可以接受洗牙及塗氟服務。</p>
+                        <p>此外缺牙情形常會造成進食的困難，因而改變食物樣態，讓血糖控制更加艱難。我們也提供假牙及植牙的治療，讓您重拾飲食樂趣的同時，幫助血糖穩定。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section" id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>醫療團隊</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-img" style="background-image: url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="team-info">
+                        <h3>徐盛邦 醫師</h3>
+                        <span class="position">內分泌專科醫師</span>
+                        <p>中山醫學大學醫學系學士<br>
+                        內分泌暨新陳代謝專科醫師</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-img" style="background-image: url('https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');"></div>
+                    <div class="team-info">
+                        <h3>劉淑韻 牙醫師</h3>
+                        <span class="position">植牙專科醫師</span>
+                        <p>中山醫學大學牙醫學士<br>
+                        中華民國植牙全國聯合醫學會專科醫師</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-img" style="background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1976&q=80');"></div>
+                    <div class="team-info">
+                        <h3>吳曛妤 牙醫師</h3>
+                        <span class="position">矯正專科醫師</span>
+                        <p>國立陽明大學牙醫學士<br>
+                        台中榮總牙科部醫師<br>
+                        中華矯正學會會員</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-img" style="background-image: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="team-info">
+                        <h3>謝欣悅 牙醫師</h3>
+                        <span class="position">一般牙科醫師</span>
+                        <p>中山醫學大學牙醫學士<br>
+                        中山醫學大學附設醫院牙科部醫師</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-img" style="background-image: url('https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80');"></div>
+                    <div class="team-info">
+                        <h3>吳燕城 醫師</h3>
+                        <span class="position">牙醫美學專科醫師</span>
+                        <p>國立臺灣大學 牙醫學士<br>
+                        台灣大學附設醫院 前牙科部醫師<br>
+                        台灣牙醫美學治療學會 認證醫師<br>
+                        醫師世界臨床雷射醫學院臨床研究員</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-img" style="background-image: url('https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');"></div>
+                    <div class="team-info">
+                        <h3>黃渼瀅 專科衛教師</h3>
+                        <span class="position">糖尿病衛教師</span>
+                        <p>國立台中護專二專部<br>
+                        內科診療機構十多年護理師經驗<br>
+                        取得台中市糖尿病衛教師執照<br>
+                        曾任風濕免疫科個管師<br>
+                        現任本所專科糖尿病衛教師</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-img" style="background-image: url('https://images.unsplash.com/photo-1612349316227-18e4cc890fb4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="team-info">
+                        <h3>董一懋 藥師</h3>
+                        <span class="position">專業藥師</span>
+                        <p>曾任內分泌科診所藥師<br>
+                        多年社區藥局藥師經驗<br>
+                        以細膩專業的態度，為您的處方把關</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule & Contact Section -->
+    <section class="section schedule" id="schedule">
+        <div class="container">
+            <div class="section-title">
+                <h2>門診時段</h2>
+            </div>
+            <div class="schedule-container">
+                <div class="schedule-table">
+                    <h3>內科門診時間表</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>時段</th>
+                                <th>星期一</th>
+                                <th>星期二</th>
+                                <th>星期三</th>
+                                <th>星期四</th>
+                                <th>星期五</th>
+                                <th>星期六</th>
+                                <th>星期日</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>上午<br>09:00-12:00</td>
+                                <td>徐盛邦</td>
+                                <td>徐盛邦</td>
+                                <td>徐盛邦</td>
+                                <td>徐盛邦</td>
+                                <td>徐盛邦</td>
+                                <td>徐盛邦</td>
+                                <td class="closed">休診</td>
+                            </tr>
+                            <tr>
+                                <td>下午<br>14:00-17:30</td>
+                                <td>徐盛邦</td>
+                                <td>徐盛邦</td>
+                                <td>徐盛邦</td>
+                                <td>徐盛邦</td>
+                                <td>徐盛邦</td>
+                                <td class="closed">休診</td>
+                                <td class="closed">休診</td>
+                            </tr>
+                            <tr>
+                                <td>晚上<br>18:00-21:00</td>
+                                <td>徐盛邦</td>
+                                <td>徐盛邦</td>
+                                <td>徐盛邦</td>
+                                <td>徐盛邦</td>
+                                <td>徐盛邦</td>
+                                <td class="closed">休診</td>
+                                <td class="closed">休診</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="contact-info" id="contact">
+                    <div class="contact-box">
+                        <h3>聯絡資訊</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>地址</strong>
+                                <span>台中市西區三民路一段149號</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>電話</strong>
+                                <span>04-23758851</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>電子郵件</strong>
+                                <span>huihuiclinic@gmail.com</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-line"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>LINE@</strong>
+                                <span>@ht149</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.060593996441!2d120.66284397653573!3d24.156490278383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d8a0c0d7d4b%3A0x1e3d5a2e3d4f4d5f!2z6Ie65YyX5biC6KW_5Y2A5LiJ6YOo5Y2X6Lev5LiA5q61MTQ56Jmf!5e0!3m2!1szh-TW!2stw!4v1692100000000!5m2!1szh-TW!2stw" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>惠騰×惠韻聯合診所</h3>
+                    <p>我們提供專業的內科與牙科整合服務，特別專注於糖尿病患者的全方位照護，讓您享受更健康的生活品質。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-line"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>快速連結</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">首頁</a></li>
+                        <li><a href="#about">關於我們</a></li>
+                        <li><a href="#team">醫療團隊</a></li>
+                        <li><a href="#services">服務項目</a></li>
+                        <li><a href="#schedule">門診時段</a></li>
+                        <li><a href="#contact">聯絡我們</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>服務項目</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">血液健檢</a></li>
+                        <li><a href="#">糖尿病治療</a></li>
+                        <li><a href="#">甲狀腺超音波穿刺</a></li>
+                        <li><a href="#">糖尿病口腔照護</a></li>
+                        <li><a href="#">功能醫學</a></li>
+                        <li><a href="#">牙科治療</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>聯絡資訊</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 台中市西區三民路一段149號</li>
+                        <li><i class="fas fa-phone"></i> 04-23758851</li>
+                        <li><i class="fas fa-envelope"></i> huihuiclinic@gmail.com</li>
+                        <li><i class="fab fa-line"></i> @ht149</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 惠騰內科診所 × 惠韻牙醫診所 聯合診所. 保留所有權利。
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-btns">
+        <a href="https://line.me/ti/p/@ht149" class="floating-btn line-btn" target="_blank">
+            <i class="fab fa-line"></i>
+        </a>
+        <div class="floating-btn top-btn" id="topBtn">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Scroll to Top Button
+        const topBtn = document.getElementById('topBtn');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                topBtn.style.display = 'flex';
+            } else {
+                topBtn.style.display = 'none';
+            }
+        });
+        
+        topBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu after clicking a link
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
